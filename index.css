@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+background-image: linear-gradient( to left ,rgb(9, 9, 36) , rgba(4, 31, 184, 0.521));
+    padding:20px 3%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top: 0;
+  z-index: 1000;
+}
+
+.logo{
+text-decoration: none;
+    color:rgb(1, 173, 165);
+    text-transform:uppercase;
+    font-weight: 900;
+    font-size: 2.2em;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size: 1.1em;
+font-weight: 800;
+transition:.3s;
+margin: 15px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1558002038-1055907df827');
+background-size:cover;
+
+}
+
+.hero h1{
+font-size:60px;
+color:#38bdf8;
+}
+
+.hero p{
+font-size:22px;
+font-weight: 800;
+margin-top:15px;
+}
+
+.btn{
+margin-top:20px;
+padding:15px 35px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+}
+
+.section{
+padding:80px 10%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:30px;
+font-weight: 700;
+color:#e0e0e0;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:40px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.35);
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+    font-size: 15px;
+font-weight: 700;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 15px 30px rgba(56,189,248,.35);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:contain;
+    background:#0f172a;
+    padding:10px;
+}
+
+.card h3{
+    margin:15px 10px;
+    font-size:22px;
+    color:#05a4f3;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.price{
+font-size:22px;
+color:#38bdf8;
+font-weight:bold;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+ transition: 0.7s ease;
+
+}
+.fb{
+            position:fixed;
+bottom:80px;
+left:20px;
+background:#2124eb;
+color:white;
+padding:15px 10px;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+ transition: 0.7s ease;
+
+        }
+
+.whatsapp:hover{
+    background-color: rgb(6, 48, 0);
+transform: scale(1.1);
+}
+.fb:hover{
+    background-color: #010225;
+    transform: scale(1.1);
+}
+html{
+scroll-behavior:smooth;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 35px;
+background:#033144;
+color:white;
+text-decoration:none;
+border-radius:40px;
+transition:0.7s ease;
+}
+
+.btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+}
+
+.btn2{
+display:inline-block;
+margin-top:20px;
+padding:15px 35px;
+background:#3002ff;
+color:rgb(228, 228, 228);
+text-decoration:none;
+border-radius:40px;
+font-size: 18px;
+transition:0.7s ease;
+}
+
+.btn2:hover{
+background:#e91d0e;
+transform:scale(1.05);
+}
+
+/* Responsive */
+
+@media (max-width:992px){
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+
+header{
+padding:1px;
+flex-direction:column;
+
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+margin:8px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.section{
+padding:60px 20px;
+}
+}
+
+
+@media (max-width:768px){
+    .products{
+        grid-template-columns:1fr;
+    }
+
+.hero{
+height:auto;
+padding:100px 20px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.logo{
+font-size:24px;
+}
+
+.products{
+grid-template-columns:1fr;
+}
+.card img{
+height:250px;
+bottom: 19px;
+display:block;
+}
+
+.whatsapp{
+left:15px;
+bottom:15px;
+padding:12px 18px;
+font-size:15px;
+}
+.fb{
+    left:15px;
+bottom:70px;
+padding:12px 10px;
+font-size:15px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section h2{
+font-size:30px;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+}
